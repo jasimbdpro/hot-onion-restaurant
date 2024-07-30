@@ -1,0 +1,251 @@
+[
+    {
+        "nameOfFood": "Hot Red Onion Burger",
+        "description": "A spicy burger topped with caramelized red onions, cheese, lettuce, and tomato, served with fries.",
+        "price": 12.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Beef patty",
+            "Red onion",
+            "Cheese",
+            "Lettuce",
+            "Tomato",
+            "Bun",
+            "Spices"
+        ]
+    },
+    {
+        "nameOfFood": "Grilled Chicken Salad",
+        "description": "Fresh greens topped with grilled chicken, red onions, cucumbers, and cherry tomatoes, served with a choice of dressing.",
+        "price": 10.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Grilled chicken",
+            "Mixed greens",
+            "Red onion",
+            "Cucumber",
+            "Cherry tomatoes",
+            "Dressing"
+        ]
+    },
+    {
+        "nameOfFood": "Spicy Onion Rings",
+        "description": "Crispy onion rings with a spicy kick, served with a side of ranch dressing.",
+        "price": 5.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Onions",
+            "Batter",
+            "Spices",
+            "Ranch dressing"
+        ]
+    },
+    {
+        "nameOfFood": "Classic Margherita Pizza",
+        "description": "Traditional pizza with fresh mozzarella, basil, and tomato sauce.",
+        "price": 14.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Pizza dough",
+            "Mozzarella cheese",
+            "Tomato sauce",
+            "Basil"
+        ]
+    },
+    {
+        "nameOfFood": "Garlic Parmesan Wings",
+        "description": "Crispy chicken wings tossed in garlic Parmesan sauce, served with celery and blue cheese dip.",
+        "price": 9.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Chicken wings",
+            "Garlic",
+            "Parmesan cheese",
+            "Celery",
+            "Blue cheese dip"
+        ]
+    },
+    {
+        "nameOfFood": "Vegetable Stir Fry",
+        "description": "A mix of fresh vegetables stir-fried in a savory sauce, served with rice.",
+        "price": 11.99,
+        "category": "breakfast",
+        "availability": true,
+        "ingredients": [
+            "Broccoli",
+            "Carrots",
+            "Bell peppers",
+            "Onions",
+            "Soy sauce",
+            "Rice"
+        ]
+    },
+    {
+        "nameOfFood": "Cheesecake",
+        "description": "Creamy cheesecake with a graham cracker crust, served with a berry compote.",
+        "price": 6.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Cream cheese",
+            "Sugar",
+            "Graham crackers",
+            "Berries"
+        ]
+    },
+    {
+        "nameOfFood": "Spicy Tuna Roll",
+        "description": "Sushi roll with spicy tuna, cucumber, and avocado, topped with sesame seeds.",
+        "price": 8.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Tuna",
+            "Cucumber",
+            "Avocado",
+            "Rice",
+            "Nori",
+            "Sesame seeds"
+        ]
+    },
+    {
+        "nameOfFood": "Beef Tacos",
+        "description": "Soft tacos filled with seasoned beef, lettuce, cheese, and pico de gallo.",
+        "price": 9.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Beef",
+            "Taco shells",
+            "Lettuce",
+            "Cheese",
+            "Pico de gallo"
+        ]
+    },
+    {
+        "nameOfFood": "Caesar Salad",
+        "description": "Crisp romaine lettuce with Caesar dressing, croutons, and Parmesan cheese.",
+        "price": 7.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Romaine lettuce",
+            "Caesar dressing",
+            "Croutons",
+            "Parmesan cheese"
+        ]
+    },
+    {
+        "nameOfFood": "BBQ Pulled Pork Sandwich",
+        "description": "Tender pulled pork with BBQ sauce, served on a bun with coleslaw.",
+        "price": 11.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Pulled pork",
+            "BBQ sauce",
+            "Bun",
+            "Coleslaw"
+        ]
+    },
+    {
+        "nameOfFood": "Chocolate Lava Cake",
+        "description": "Rich chocolate cake with a gooey center, served with vanilla ice cream.",
+        "price": 7.99,
+        "category": "Lunch",
+        "availability": true,
+        "ingredients": [
+            "Chocolate",
+            "Butter",
+            "Eggs",
+            "Flour",
+            "Sugar",
+            "Vanilla ice cream"
+        ]
+    },
+    {
+        "nameOfFood": "Grilled Salmon",
+        "description": "Grilled salmon fillet with a lemon butter sauce, served with vegetables and rice.",
+        "price": 18.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Salmon",
+            "Lemon",
+            "Butter",
+            "Vegetables",
+            "Rice"
+        ]
+    },
+    {
+        "nameOfFood": "Vegetarian Pasta",
+        "description": "Pasta with a mix of vegetables in a tomato basil sauce.",
+        "price": 12.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Pasta",
+            "Tomato sauce",
+            "Basil",
+            "Vegetables"
+        ]
+    },
+    {
+        "nameOfFood": "Shrimp Scampi",
+        "description": "Shrimp sautéed in garlic and butter, served over linguine with a hint of lemon.",
+        "price": 16.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Shrimp",
+            "Garlic",
+            "Butter",
+            "Linguine",
+            "Lemon"
+        ]
+    },
+    {
+        "nameOfFood": "Pepperoni Pizza",
+        "description": "Classic pizza topped with pepperoni and mozzarella cheese.",
+        "price": 13.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Pizza dough",
+            "Tomato sauce",
+            "Mozzarella cheese",
+            "Pepperoni"
+        ]
+    },
+    {
+        "nameOfFood": "Chicken Quesadilla",
+        "description": "Grilled chicken and cheese in a flour tortilla, served with salsa and sour cream.",
+        "price": 9.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Chicken",
+            "Cheese",
+            "Flour tortilla",
+            "Salsa",
+            "Sour cream"
+        ]
+    },
+    {
+        "nameOfFood": "Mango Smoothie",
+        "description": "Refreshing smoothie made with mango, yogurt, and a hint of honey.",
+        "price": 5.99,
+        "category": "Dinner",
+        "availability": true,
+        "ingredients": [
+            "Mango",
+            "Yogurt",
+            "Honey"
+        ]
+    }
+]
