@@ -1,9 +1,10 @@
 import './App.css'
+import FoodDetail from './components/FoodDetail'
 import Homepage from './components/Homepage'
 import MainFooter from './components/MainFooter'
 import MainHeader from './components/MainHeader'
 import MainNav from './components/MainNav'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -11,11 +12,14 @@ function App() {
 
   return (
     <BrowserRouter>
-
       <MainNav />
-      <MainHeader />
-      <Homepage />
-      <h3>hleoodddddddd</h3>
+      <Routes>
+        <Route exact path='/' element={<Homepage />} />
+        <Route path='/breakfast' element={<Homepage />} />
+        <Route path='/lunch' element={<Homepage />} />
+        <Route path='/dinner' element={<Homepage />} />
+        <Route path='/food/:foodName' element={<FoodDetail />} />
+      </Routes>
       <MainFooter />
     </BrowserRouter>
   )

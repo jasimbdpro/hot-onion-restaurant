@@ -1,3 +1,12 @@
 // _custom.scss
 $enable-negative-margins: true;
+$enable-cssgrid: true;
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.hover-animation {
+    transition: box-shadow 0s; // Instant transition for no delay
+
+    &:hover {
+        box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important; // Apply box-shadow on hover
+    }
+}
