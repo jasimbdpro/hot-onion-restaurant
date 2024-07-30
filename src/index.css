@@ -1,3 +1,17 @@
 body {
   margin: 1px;
 }
+
+.main-header {
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 1850/708;
+  background-image: url('/public/images/bannerbackground.png');
+  /* Replace with the path to your image */
+  background-size: cover;
+  /* Ensures the image covers the entire header */
+  background-position: center;
+  /* Centers the image within the header */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+}
