@@ -6,7 +6,7 @@ body {
   width: 100vw;
   height: auto;
   aspect-ratio: 1850/708;
-  background-image: url('/public/images/bannerbackground.png');
+  background-image: url('/images/bannerbackground.png');
   /* Replace with the path to your image */
   background-size: cover;
   /* Ensures the image covers the entire header */

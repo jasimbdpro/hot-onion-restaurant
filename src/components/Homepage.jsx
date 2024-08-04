@@ -4,7 +4,7 @@ import FoodItem from './FoodItem';
 import MainHeader from './MainHeader';
 
 const Homepage = () => {
-    const [cart, setCart] = useState([]);
+    // const [cart, setCart] = useState([]);
     const [foodItem, setFoodItem] = useState([]);
     const [category, setCategory] = useState('lunch');
     useEffect(() => {
@@ -29,7 +29,7 @@ const Homepage = () => {
             </div>
             <div className='row row-cols-1 row-cols-md-3 g-4'>
                 {
-                    foodItem.map((i, index) => <FoodItem key={index} foods={i} />)
+                    foodItem.map((i, index) => <FoodItem buttonHandler={buttonHandler} key={index} foods={i} />)
                 }
 
             </div>
