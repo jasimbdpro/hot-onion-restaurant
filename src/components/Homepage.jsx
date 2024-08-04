@@ -4,6 +4,7 @@ import FoodItem from './FoodItem';
 import MainHeader from './MainHeader';
 
 const Homepage = () => {
+    const [cart, setCart] = useState([]);
     const [foodItem, setFoodItem] = useState([]);
     const [category, setCategory] = useState('lunch');
     useEffect(() => {
@@ -30,7 +31,9 @@ const Homepage = () => {
                 {
                     foodItem.map((i, index) => <FoodItem key={index} foods={i} />)
                 }
+
             </div>
+            <div className=' text-center mt-5'><button className='btn btn-secondary'>Check Out Your Food</button></div>
         </div>
     );
 };
