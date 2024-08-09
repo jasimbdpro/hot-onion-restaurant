@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <HashRouter basename='/hot-onion-restaurant'>
+    <HashRouter>
       <MainNav />
       <Routes>
         <Route exact path='/' element={<Homepage />} />
