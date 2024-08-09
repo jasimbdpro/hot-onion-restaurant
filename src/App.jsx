@@ -4,7 +4,7 @@ import Homepage from './components/Homepage'
 import LoginPage from './components/LoginPage'
 import MainFooter from './components/MainFooter'
 import MainNav from './components/MainNav'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import SignupPage from './components/SignupPage'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter basename='/hot-onion-restaurant'>
       <MainNav />
       <Routes>
         <Route exact path='/' element={<Homepage />} />
@@ -24,7 +24,7 @@ function App() {
         <Route path='/food/:foodName' element={<FoodDetail />} />
       </Routes>
       <MainFooter />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
