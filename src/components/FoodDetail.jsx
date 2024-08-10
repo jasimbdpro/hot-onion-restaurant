@@ -1,3 +1,5 @@
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
@@ -26,9 +28,11 @@ const FoodDetail = () => {
                     <p className=' fs-6'>{foodItem.description}</p>
                     <div className=' d-flex'>
                         <p className='fs-2'>${foodItem.price}</p>
-                        <p className=' fs-2 bg-danger'> &nbsp;- 1 +</p>
+                        <p className=' fs-2 bg-danger rounded-3 px-2 mx-3'>
+                            <span className=' px-2 rounded-1' >-</span> 1 <span className=' px-2 rounded-1' >+</span>
+                        </p>
                     </div>
-                    <div className="btn btn-primary">Add to Cart</div>
+                    <div className="btn btn-primary"><FontAwesomeIcon icon={faCartShopping} /> &nbsp;Add</div>
                 </div>
                 <img className='col-6' src={`/images/${foodItem.category}/${foodItem.category}${foodItem.thumbnails}.png`} alt="" />
             </div>
