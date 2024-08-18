@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
@@ -18,7 +21,9 @@ const FoodDetail = () => {
     return (
         <div>
             <div className=' d-flex justify-content-center'>
+                // eslint-disable-next-line no-undef
                 <Link onClick={() => buttonHandler('breakfast')} to='/breakfast' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Breakfast</Link>
+                // eslint-disable-next-line no-undef, no-undef, no-undef
                 <Link onClick={() => buttonHandler('lunch')} to='/lunch' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Lunch</Link>
                 <Link onClick={() => buttonHandler('dinner')} to='/dinner' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Dinner</Link>
             </div>
@@ -27,8 +32,8 @@ const FoodDetail = () => {
                     <h1 className=' fs-1'>{foodItem.nameOfFood}</h1>
                     <p className=' fs-6'>{foodItem.description}</p>
                     <div className=' d-flex'>
-                        <p className='fs-2'>${foodItem.price}</p>
-                        <p className=' fs-2 bg-danger rounded-3 px-2 mx-3'>
+                        <p className='fs-1'>${foodItem.price}</p>
+                        <p className=' fs-3 bg-secondary text-white rounded-3 px-2 mx-3'>
                             <span className=' px-2 rounded-1' >-</span> 1 <span className=' px-2 rounded-1' >+</span>
                         </p>
                     </div>

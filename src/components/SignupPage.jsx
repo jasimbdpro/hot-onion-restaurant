@@ -1,8 +1,11 @@
+/* eslint-disable no-undef */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import app from '../firebase/firebaseApp';
 
 const SignupPage = () => {
     const navigate = useNavigate()
+
     return (
         <div>
             <section className="vh-100" style={{ backgroundColor: '#eee' }}
