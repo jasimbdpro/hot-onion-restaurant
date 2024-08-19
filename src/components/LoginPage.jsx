@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signInUsrWithEmailAndPassword } from '../firebase/firebaseConfig';
 
 const LoginPage = () => {
     const navigate = useNavigate()
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        signInUsrWithEmailAndPassword(email, password)
+    }
     return (
         <div>
             <section className="h-100 gradient-form" style={{ backgroundColor: '#eee' }}>
@@ -20,17 +28,23 @@ const LoginPage = () => {
                                                 <h4 className="mt-1 h1 fw-bold mb-5 pb-1">Best food for your belly</h4>
                                             </div>
 
-                                            <form>
+                                            <form onSubmit={handleSubmit}>
                                                 <p>Please login to your account</p>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
+
+
+                                                    {/* Email Address  */}
                                                     <input type="email" id="form2Example11" className="form-control"
-                                                        placeholder="Email address" />
+                                                        placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} />
                                                     <label className="form-label" htmlFor="form2Example11">Username</label>
                                                 </div>
 
                                                 <div data-mdb-input-init className="form-outline mb-4">
-                                                    <input type="password" id="form2Example22" placeholder='Your password' className="form-control" />
+
+
+                                                    {/* Password Field  */}
+                                                    <input type="password" id="form2Example22" placeholder='Your password' className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
                                                     <label className="form-label" htmlFor="form2Example22">Password</label>
                                                 </div>
 

@@ -1,10 +1,18 @@
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import app from '../firebase/firebaseApp';
+import { createUsrWithEmailAndPassword } from '../firebase/firebaseConfig';
 
 const SignupPage = () => {
     const navigate = useNavigate()
+    const [displayName, setDisplayName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        createUsrWithEmailAndPassword(email, password, displayName)
+    }
 
     return (
         <div>
@@ -21,12 +29,15 @@ const SignupPage = () => {
 
                                             <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                            <form className="mx-1 mx-md-4">
+                                            <form onSubmit={handleSubmit} className="mx-1 mx-md-4">
 
                                                 <div className="d-flex flex-row align-items-center mb-4">
                                                     <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                                                     <div data-mdb-input-init className="form-outline flex-fill mb-0">
-                                                        <input type="text" placeholder='Name' id="form3Example1c" className="form-control" />
+
+
+                                                        {/* Actual Name Input Field  */}
+                                                        <input type="text" placeholder='Name' id="form3Example1c" className="form-control" value={displayName} onChange={(e) => setDisplayName(e.target.value)} />
                                                         <label className="form-label" htmlFor="form3Example1c">Your Name</label>
                                                     </div>
                                                 </div>
@@ -34,7 +45,9 @@ const SignupPage = () => {
                                                 <div className="d-flex flex-row align-items-center mb-4">
                                                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                     <div data-mdb-input-init className="form-outline flex-fill mb-0">
-                                                        <input type="email" placeholder='Email' id="form3Example3c" className="form-control" />
+
+                                                        {/* Email Input Field  */}
+                                                        <input type="email" placeholder='Email' id="form3Example3c" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
                                                         <label className="form-label" htmlFor="form3Example3c">Your Email</label>
                                                     </div>
                                                 </div>
@@ -42,25 +55,19 @@ const SignupPage = () => {
                                                 <div className="d-flex flex-row align-items-center mb-4">
                                                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                                                     <div data-mdb-input-init className="form-outline flex-fill mb-0">
-                                                        <input type="password" placeholder='Password' id="form3Example4c" className="form-control" />
+
+                                                        {/* Password Input Field  */}
+                                                        <input type="password" placeholder='Password' id="form3Example4c" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
                                                         <label className="form-label" htmlFor="form3Example4c">Password</label>
                                                     </div>
                                                 </div>
 
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-key fa-lg me-3 fa-fw"></i>
-                                                    <div data-mdb-input-init className="form-outline flex-fill mb-0">
-                                                        <input type="password" placeholder='Password' id="form3Example4cd" className="form-control" />
-                                                        <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
-                                                    </div>
-                                                </div>
-
-                                                <div className="form-check d-flex justify-content-center mb-5">
+                                                {/* <div className="form-check d-flex justify-content-center mb-5">
                                                     <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                                                     <label className="form-check-label" htmlFor="form2Example3">
                                                         I agree all statements in <a href="#!">Terms of service</a>
                                                     </label>
-                                                </div>
+                                                </div> */}
 
                                                 <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                     <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-lg">Register</button>

@@ -21,9 +21,9 @@ const FoodDetail = () => {
     return (
         <div>
             <div className=' d-flex justify-content-center'>
-                // eslint-disable-next-line no-undef
+                {/* eslint-disable-next-line no-undef */}
                 <Link onClick={() => buttonHandler('breakfast')} to='/breakfast' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Breakfast</Link>
-                // eslint-disable-next-line no-undef, no-undef, no-undef
+                {/* eslint-disable-next-line no-undef, no-undef, no-undef */}
                 <Link onClick={() => buttonHandler('lunch')} to='/lunch' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Lunch</Link>
                 <Link onClick={() => buttonHandler('dinner')} to='/dinner' className=' text-decoration-none px-3 py-1 rounded m-3 border-1 shadow'>Dinner</Link>
             </div>
