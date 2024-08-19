@@ -49,7 +49,7 @@ const LoginPage = () => {
                                                 </div>
 
                                                 <div className="text-center pt-1 mb-5 pb-1">
-                                                    <button data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                                                    <button data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                                                         in</button>
                                                 </div>
 

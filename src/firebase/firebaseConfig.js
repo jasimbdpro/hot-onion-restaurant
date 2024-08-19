@@ -24,10 +24,12 @@ export const createUsrWithEmailAndPassword = async (email, password, displayName
         // User signed up successfully
         updateProfile(auth.currentUser, { displayName })
         const user = userCredential.user
-        const token = userCredential.accessToken;
+        const token = user.accessToken;
         user.displayName = displayName;
-        localStorage.setItem('user', JSON.stringify(user))
-        localStorage.setItem('token', JSON.stringify(token))
+        if (userCredential) {
+            localStorage.setItem('user', JSON.stringify(user))
+            localStorage.setItem('token', JSON.stringify(token))
+        }
         console.log("User signed up:", userCredential.user);
     } catch (error) {
         // Handle errors
@@ -41,9 +43,11 @@ export const signInUsrWithEmailAndPassword = async (email, password) => {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user
-        const token = userCredential.accessToken;
-        localStorage.setItem('user', JSON.stringify(user))
-        localStorage.setItem('token', JSON.stringify(token))
+        const token = user.accessToken;
+        if (userCredential) {
+            localStorage.setItem('user', JSON.stringify(user))
+            localStorage.setItem('token', JSON.stringify(token))
+        }
         // User signed in successfully
         console.log("User signed in:", userCredential.user);
     } catch (error) {

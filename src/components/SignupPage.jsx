@@ -70,7 +70,7 @@ const SignupPage = () => {
                                                 </div> */}
 
                                                 <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-lg">Register</button>
+                                                    <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-lg" value='submit'>Register</button>
                                                 </div>
 
                                                 <div className="d-flex align-items-center justify-content-center pb-4">
