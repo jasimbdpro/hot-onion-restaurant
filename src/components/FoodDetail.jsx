@@ -3,10 +3,13 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { UserContext } from '../App';
 
 const FoodDetail = () => {
+    const [cart, setCart] = useContext(UserContext)
+    const [productNumber, setProductNumber] = useState(0)
     const { foodName } = useParams()
     const [foodItem, setFoodItem] = useState({});
     useEffect(() => {
@@ -34,15 +37,15 @@ const FoodDetail = () => {
                     <div className=' d-flex'>
                         <p className='fs-1'>${foodItem.price}</p>
                         <p className=' fs-3 bg-secondary text-white rounded-3 px-2 mx-3'>
-                            <span className=' px-2 rounded-1' >-</span> 1 <span className=' px-2 rounded-1' >+</span>
+                            <span className=' px-2 rounded-1' onClick={() => (productNumber > 0) && setProductNumber(productNumber - 1)}  >-</span> {productNumber} <span className=' px-2 rounded-1' onClick={() => setProductNumber(productNumber + 1)} >+</span>
                         </p>
                     </div>
-                    <div className="btn btn-primary"><FontAwesomeIcon icon={faCartShopping} /> &nbsp;Add</div>
+                    <div className="btn btn-primary" onClick={() => setCart(productNumber)}><FontAwesomeIcon icon={faCartShopping} /> &nbsp;Add</div>
                 </div>
                 <img className='col-6' src={`/images/${foodItem.category}/${foodItem.category}${foodItem.thumbnails}.png`} alt="" />
             </div>
 
-        </div>
+        </div >
     );
 };
 
