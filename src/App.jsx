@@ -4,7 +4,7 @@ import Homepage from './components/Homepage'
 import LoginPage from './components/LoginPage'
 import MainFooter from './components/MainFooter'
 import MainNav from './components/MainNav'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignupPage from './components/SignupPage'
 import { createContext, useState } from 'react'
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <UserContext.Provider value={[cart, setCart]}>
-      <HashRouter>
+      <BrowserRouter>
         <MainNav />
         <Routes>
           <Route exact path='/' element={<Homepage />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path='/food/:foodName' element={<FoodDetail />} />
         </Routes>
         <MainFooter />
-      </HashRouter>
+      </BrowserRouter>
     </UserContext.Provider>
   )
 }
